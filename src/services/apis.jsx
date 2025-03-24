@@ -1,5 +1,6 @@
 // const BASE_URL = process.env.REACT_APP_BASE_URL;
-const BASE_URL = "https://erp-backend-1-five.vercel.app/api";
+// const BASE_URL = "https://erp-backend-1-five.vercel.app/api";
+const BASE_URL = "http://localhost:5000/api";
 
 export const authEndpoints = {
     TEAM_LOGIN_API: BASE_URL + "/teams/login/"

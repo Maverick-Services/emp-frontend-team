@@ -162,7 +162,8 @@ export const AddTaskDetails = ({ members,task, editTask, setShowDetails, showDet
       if(isFormUpdated(data)){
         const currentValues = getValues();
         let reqBody = {
-          taskId: task?._id
+          taskId: task?._id,
+          team: task?.team
         };
 
         if (currentValues?.name !== task?.name)

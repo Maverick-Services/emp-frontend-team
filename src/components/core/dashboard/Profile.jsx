@@ -8,7 +8,7 @@ export const Profile = () => {
 
   const {team} = useContext(AuthContext);
 
-  // console.log(team);
+  console.log(team);
 
   if(!team)
     return <Spinner/>
