@@ -13,6 +13,9 @@ import PrivateRoute from './components/core/auth/PrivateRoute'
 import Queries from './components/core/dashboard/queries/Queries'
 import Query from './components/core/dashboard/queries/Query'
 import RaiseQuery from './components/core/dashboard/queries/RaiseQuery'
+import Announcements from './components/core/dashboard/announcements/Announcements'
+import NewAnnouncement from './components/core/dashboard/announcements/NewAnnouncement'
+import AnnouncementDetails from './components/core/dashboard/announcements/AnnouncementDetails'
 
 function App() {
   return (
@@ -41,6 +44,9 @@ function App() {
           <Route path='/dashboard/queries' element={<Queries />} />
           <Route path='/dashboard/queries/:queryId' element={<Query />} />
           <Route path='/dashboard/queries/raiseQuery' element={<RaiseQuery />} />
+          <Route path='/dashboard/announcements' element={<Announcements />} />
+          <Route path='/dashboard/announcements/newAnnouncement' element={<NewAnnouncement />} />
+          <Route path='/dashboard/announcements/:announcementId' element={<AnnouncementDetails />} />
         </Route>
       </Routes>
     </div>

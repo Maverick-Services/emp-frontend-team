@@ -18,7 +18,7 @@ function Query() {
     const [error, setError] = useState('')
     const [query, setQuery] = useState(null)
     const [message, setMessage] = useState('')
-    console.log(query)
+    // console.log(query)
 
     const fetchQueryDetails = async () => {
         setLoading(true)

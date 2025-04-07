@@ -26,3 +26,11 @@ export const queryEndPoints = {
     FETCH_QUERIES_BY_TEAM_API: BASE_URL + '/users/fetchQueriesByTeam',
     FETCH_COMPLETE_QUERY_DETAILS_API: BASE_URL + '/users/fetchCompleteQueryDetails', // POST
 }
+
+export const announcementEndpoints = {
+    CREATE_ANNOUNCEMENT_API: BASE_URL + '/users/createAnnouncement', // POST
+    DELETE_ANNOUNCEMENT_API: BASE_URL + '/users/deleteAnnouncement', // POST
+    FETCH_ANNOUNCEMENTS_BY_TEAM_API: BASE_URL + '/users/fetchAnnouncementsByTeam', // POST
+    FETCH_ALL_ANNOUNCEMENTS_API: BASE_URL + '/users/fetchAllAnnouncements', // GET
+    FETCH_COMPLETE_ANNOUNCEMENT_DETAILS_API: BASE_URL + '/users/fetchCompleteAnnouncementDetails', // POST
+}
