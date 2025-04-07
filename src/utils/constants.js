@@ -1,9 +1,11 @@
 export const STATUS = {
     COMPLETED: "Completed",
-    PENDING: "Pending"
+    PENDING: "Pending",
+    RESOLVED: 'Resolved'
 }
 
 export const ROLE = {
     ADMIN: "admin",
-    EMPLOYEE: "employee"
+    EMPLOYEE: "employee",
+    TEAM: "team"
 }

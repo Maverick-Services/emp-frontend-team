@@ -19,3 +19,10 @@ export const taskEndpoints = {
     CREATE_STEP_API: BASE_URL + "/steps/createStep",
     EDIT_STEP_API: BASE_URL + "/steps/updateStep",
 }
+
+export const queryEndPoints = {
+    CREATE_QUERY_API: BASE_URL + '/users/createQuery', // POST
+    ADD_REPLY_API: BASE_URL + '/users/addReply', // POST
+    FETCH_QUERIES_BY_TEAM_API: BASE_URL + '/users/fetchQueriesByTeam',
+    FETCH_COMPLETE_QUERY_DETAILS_API: BASE_URL + '/users/fetchCompleteQueryDetails', // POST
+}

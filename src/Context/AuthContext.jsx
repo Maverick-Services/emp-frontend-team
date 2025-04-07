@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export const AuthContext = createContext();
 
-function AuthContextProvider({children}){
+function AuthContextProvider({ children }) {
 
     const [team, setTeam] = useState(
         localStorage?.getItem("team") ? JSON.parse(localStorage?.getItem("team")) : null
@@ -18,18 +18,18 @@ function AuthContextProvider({children}){
         localStorage?.getItem("token") ? localStorage?.getItem("token") : null
     )
 
-    useEffect(()=>{
-        token && localStorage.setItem("token",token);
+    useEffect(() => {
+        token && localStorage.setItem("token", token);
         // setToken(localStorage.getItem("token"));
-    },[token]);
-    
-    useEffect(()=>{
-        team && localStorage.setItem("team",JSON.stringify(team));
+    }, [token]);
+
+    useEffect(() => {
+        team && localStorage.setItem("team", JSON.stringify(team));
         // setTeam(JSON.parse(localStorage.getItem("team")));
-    },[team]);
+    }, [team]);
 
     let values = {
-        team,setTeam,
+        team, setTeam,
         token, setToken,
         task, setTask,
         tasks, setTasks,

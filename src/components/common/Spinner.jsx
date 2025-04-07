@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Spinner = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="w-full min-h-screen flex items-center justify-center">
       <motion.div
         className="flex flex-col items-center gap-4"
         initial={{ opacity: 0 }}

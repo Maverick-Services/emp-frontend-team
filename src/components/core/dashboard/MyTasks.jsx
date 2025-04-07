@@ -6,6 +6,7 @@ import { AuthContext } from "../../../Context/AuthContext";
 import { Spinner } from "../../common/Spinner";
 import { formattedFullDate } from "../../../utils/dateFormatter";
 import { STATUS } from "../../../utils/constants";
+import LayoutProvider from "../../common/LayoutProvider";
 
 const MyTasks = () => {
   const { token, loading, setLoading } = useContext(AuthContext);
@@ -27,11 +28,7 @@ const MyTasks = () => {
   if (loading) return <Spinner />;
 
   return (
-    <div className="w-full min-h-screen p-6 flex flex-col gap-5 bg-gray-100">
-      {/* Page Heading */}
-      <h1 className="text-4xl font-bold text-[#1C398E] text-center mb-8">
-        Team Tasks
-      </h1>
+    <LayoutProvider heading={"Team Tasks"}>
 
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
@@ -69,9 +66,8 @@ const MyTasks = () => {
                     {formattedFullDate(ts?.deadline)}
                   </p>
                   <span
-                    className={`p-[0.2rem] px-[0.5rem] rounded-full text-sm font-medium text-white ${
-                      ts?.status === STATUS.COMPLETED ? "bg-green-500" : "bg-red-500"
-                    }`}
+                    className={`p-[0.2rem] px-[0.5rem] rounded-full text-sm font-medium text-white ${ts?.status === STATUS.COMPLETED ? "bg-green-500" : "bg-red-500"
+                      }`}
                   >
                     {ts?.status}
                   </span>
@@ -81,7 +77,7 @@ const MyTasks = () => {
           ))
         )}
       </div>
-    </div>
+    </LayoutProvider>
   );
 };
 
